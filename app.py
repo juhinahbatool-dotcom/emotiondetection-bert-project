@@ -1,8 +1,7 @@
 import streamlit as st
 import torch
-import zipfile
 import os
-import requests
+import gdown
 from transformers import BertTokenizer, BertForSequenceClassification
 
 
