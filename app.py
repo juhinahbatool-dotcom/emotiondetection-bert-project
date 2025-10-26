@@ -13,12 +13,12 @@ MODEL_DIR = "model"
 if not os.path.exists(MODEL_DIR):
   st.write("Downloading fine-tuned BERT model from Google Drive...")
   response = requests.get(DRIVE_MODEL_URL)
-with open(MODEL_ZIP, "wb") as f:
-  f.write(response.content)
-  st.write("Download complete. Extracting model files...")
-with zipfile.ZipFile(MODEL_ZIP, "r") as zip_ref:
-  zip_ref.extractall(MODEL_DIR)
-  st.success("Model extracted successfully!")
+  with open(MODEL_ZIP, "wb") as f:
+    f.write(response.content)
+    st.write("Download complete. Extracting model files...")
+  with zipfile.ZipFile(MODEL_ZIP, "r") as zip_ref:
+    zip_ref.extractall(MODEL_DIR)
+    st.success("Model extracted successfully!")
 
 
 
