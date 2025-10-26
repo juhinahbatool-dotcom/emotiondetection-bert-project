@@ -1,6 +1,4 @@
-transformers==4.44.2
-torch
 streamlit
-scikit-learn
-pandas
-numpy
+torch
+transformers
+gdown
